@@ -8,15 +8,15 @@ namespace classConsole_ConsoleApplication
     {
         static void Main(string[] args)
         {
-            ForegroundColor = Cyan;
             BackgroundColor = DarkMagenta; // bezieht sich nur auf Text
-            WriteLine("The current window width is {0} Chars", Console.WindowWidth);
+            Clear();
+            WriteLine("The current window width is {0} Chars", WindowWidth);
             ReadLine();
-            SetWindowSize(100, 40);
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.BackgroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("The current window width is {0} Chars", Console.WindowWidth);
-            Console.ReadLine();
+            SetWindowSize(LargestWindowWidth/2, 30); // /2, 50% der maximalen Breite
+            BackgroundColor = Cyan;
+            Clear();
+            WriteLine("The current window width is {0} Chars", WindowWidth);
+            ReadLine();
 
         }
     }
